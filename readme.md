@@ -27,7 +27,7 @@ To use this script, you'll need:
 
 -   A server running Linux with bash installed.
 -   A Cloudflare account, and your site set up on Cloudflare.
--   Your Cloudflare API key and Zone ID.
+-   A scoped Cloudflare API token (recommended permission: `Zone > Zone Settings > Edit` for your zone) and your Zone ID.
 
 ### How to install
 
@@ -38,7 +38,7 @@ Navigate to the parent path where you want to install.  If you want to install t
 wget https://raw.githubusercontent.com/guided-hacking/cfautouam/master/cfautouam.sh;
 ```
 
-Define the parent path where you want to install the script, your Cloudflare email, API key, Zone ID, regular_status and regular_status_s as it related to your normal security level
+Define the parent path where you want to install the script, your Cloudflare API token, Zone ID, regular_status_s as it relates to your normal security level
 
 ```bash
 mkdir cfautouam;
@@ -57,8 +57,6 @@ After confirming it works, set debug level to 0.
 ```
 -install        : installs and enables service
 -uninstall      : uninstalls and then deletes the sub folder
--disable_script : temporarily disables the service from running
--enable_script  : re-enables the service
 -enable_uam     : enables Under Attack Mode manually
 -disable_uam    : disables Under Attack Mode manually
 ```
